@@ -60,12 +60,11 @@ func HtmlFromSpec(specPath string, apiDescriptionUrl string) []byte {
 	return buf.Bytes()
 }
 
-// checkModelErrors prints errors and panics if there are any
 func checkModelErrors(errors []error) {
 	if len(errors) > 0 {
 		for i := range errors {
 			fmt.Println(errors[i])
 		}
-		log.Fatal(fmt.Sprintf("Could not create model from specification"))
+		log.Fatal("Could not create model from specification")
 	}
 }
