@@ -19,3 +19,9 @@ require (
 	golang.org/x/sys v0.1.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+retract (
+	v1.0.1
+	// On second thought this is just a CLI tool so no need to publish it to pkg.go.dev
+	v1.0.0
+)
